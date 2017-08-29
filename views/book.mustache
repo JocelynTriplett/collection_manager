@@ -1,0 +1,61 @@
+{{#book}}
+<div class="book">
+  <h2>{{title}}</h2>
+  <p>
+    <a href="/">Back to book list</a>
+  </p>
+  <dl>
+  {{#author}}
+  <dt>
+    Author
+  </dt>
+  <dd>
+    {{.}}
+  </dd>
+  {{/author}}
+  {{#publisher}}
+  <dt>
+    Publisher
+  </dt>
+  <dd>
+    {{.}}
+  </dd>
+  {{/publisher}}
+  {{#location}}
+  <dt>
+    Location
+  </dt>
+  <dd>
+    {{.}}
+  </dd>
+  {{/location}}
+  </dl>
+
+  <h3>Contributors</h3>
+  {{^contributor}}
+  <p>
+    You do not have any contributors.
+  </p>
+  {{/contributor}}
+  <ul>
+  {{#contributor}}
+    <li>
+      {{name}} {{role}}
+    </li>
+  {{/contributor}}
+  </ul>
+  <p>
+    <a href="/{{_id}}/new_contributor/" class="button">Add contributor</a>
+  </p>
+
+  <h3>Pages</h3>
+
+  <ol>
+  {{#pages}}
+    <li>
+      {{.}}
+    </li>
+  {{/pages}}
+</ol>
+</div>
+{{/book}}

@@ -1,0 +1,41 @@
+<h1>Books</h1>
+
+<p>
+  <a href="/new/">Add new book</a>
+</p>
+
+{{#book}}
+  <div class="book">
+  <h2>
+    <a href="/{{_id}}">
+      {{title}}
+    </a>
+  </h2>
+  <dl>
+  {{#author}}
+  <dt>
+  Author
+  </dt>
+  <dd>
+    {{.}}
+  </dd>
+  {{/author}}
+  {{#publisher}}
+  <dt>
+    Publisher
+  </dt>
+  <dd>
+    {{.}}
+  </dd>
+  {{/publisher}}
+  {{#pages}}
+  <dt>
+    Pages
+  </dt>
+  <dd>
+    {{.}}
+  </dd>
+  {{/pages}}
+  </dl>
+  </div>
+{{/book}}

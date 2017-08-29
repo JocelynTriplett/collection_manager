@@ -1,0 +1,28 @@
+{{#book}}
+  <h2>Contributors for {{title}}</h2>
+
+  <ul>
+  {{#contributors}}
+    <li>
+      {{name}} {{role}}
+    </li>
+  {{/contributors}}
+  </ul>
+
+  <form action="/{{_id}}/new_contributor/" method="POST">
+    <p>
+      <label for="name">Name:</label>
+      <input type="text" name="name" />
+    </p>
+
+    <p>
+      <label for="role">Role:</label>
+      <input type="text" name="role" />
+    </p>
+
+    <p>
+      <button type="submit">Add contributor</button>
+      <a href="/{{_id}}/" class="button button-danger">Back to book</a>
+    </p>
+  </form>
+{{/book}}
